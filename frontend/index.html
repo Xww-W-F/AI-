@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Microservice Generator</title>
+</head>
+<body>
+<h2>AI 微服务生成平台</h2>
+<textarea id="prompt" rows="6" cols="60"></textarea><br/>
+<button onclick="generate()">生成代码</button>
+<pre id="result"></pre>
+
+<script>
+function generate() {
+    const prompt = document.getElementById("prompt").value;
+    fetch("http://localhost:8080/generate", {
+        method: "POST",
+        headers: {"Content-Type": "text/plain"},
+        body: prompt
+    })
+    .then(res => res.text())
+    .then(data => document.getElementById("result").innerText = data);
+}
+</script>
+</body>
+</html>

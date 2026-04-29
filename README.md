@@ -1,2 +1,11 @@
-# AI-
-我构建了一个面向 Java 微服务开发的 AI Agent，能够根据业务需求自动生成符合 Spring Boot / Spring Cloud 架构规范的服务代码，包括接口定义、DTO、数据库模型及基础配置。  核心痛点是：传统微服务开发中大量模板代码重复、规范不统一、上手成本高
+# AI Microservice Code Generation Platform
+
+## Features
+- Prompt-based microservice generation
+- Multi-service scaffold (Controller / Service / Repository)
+- Simple Web UI
+- Export as ZIP
+
+## Run
+backend: mvn spring-boot:run
+frontend: open index.html
